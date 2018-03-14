@@ -1,0 +1,22 @@
+{
+  "name": "flexi-grid",
+  "version": "1.0.0",
+  "description": "A simple grid system built using flexbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrseanbaines/flexi-grid.git"
+  },
+  "author": "Sean Baines",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/mrseanbaines/flexi-grid/issues"
+  },
+  "homepage": "https://github.com/mrseanbaines/flexi-grid#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
