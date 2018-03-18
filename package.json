@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/mrseanbaines/flexi-grid#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-sass": "^3.1.0",
+    "run-sequence": "^2.2.1"
   }
 }
