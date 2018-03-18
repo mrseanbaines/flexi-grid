@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">⚠️ In progress...</h1>
+# ⚠️ In progress...
 
 # flexi-grid
 A simple grid system built using flexbox
