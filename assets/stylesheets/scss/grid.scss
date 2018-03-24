@@ -3,15 +3,15 @@
 %column-styles {
   position: relative;
   min-height: 1px;
-  padding-right: ($gutter);
-  padding-left: ($gutter);
+  padding-right: $gutter;
+  padding-left: $gutter;
 }
 
 .container {
   width: 100%;
   max-width: $site-max-width;
-  padding-right: ($gutter);
-  padding-left: ($gutter);
+  padding-right: $gutter;
+  padding-left: $gutter;
   margin-right: auto;
   margin-left: auto;
 }
@@ -19,8 +19,8 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: ( -$gutter);
-  margin-left: ( -$gutter);
+  margin-right: -$gutter;
+  margin-left: -$gutter;
 }
 
 // All columns
