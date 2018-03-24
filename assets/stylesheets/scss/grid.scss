@@ -1,1 +1,128 @@
 @import 'setup';
+
+%column-styles {
+  position: relative;
+  min-height: 1px;
+  padding-right: ($gutter);
+  padding-left: ($gutter);
+}
+
+.container {
+  width: 100%;
+  max-width: $site-max-width;
+  padding-right: ($gutter);
+  padding-left: ($gutter);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: ( -$gutter);
+  margin-left: ( -$gutter);
+}
+
+// All columns
+@for $i from 1 through 12 {
+  .xs-c#{$i},
+  .sm-c#{$i},
+  .md-c#{$i},
+  .lg-c#{$i},
+  .xl-c#{$i} {
+    @extend %column-styles;
+  }
+}
+
+// Extra small columns
+@for $i from 1 through 12 {
+  .xs-c#{$i} {
+    flex: (100% / 12) * $i;
+  }
+}
+
+// Automatically sizes columns evenly within row
+.xs-auto {
+  flex: auto;
+}
+
+// Sets columns to default width
+.xs-initial {
+  flex: initial;
+}
+
+// Small columns
+@media (min-width: 576px) {
+  @for $i from 1 through 12 {
+    .sm-c#{$i} {
+      flex: (100% / 12) * $i;
+    }
+  }
+
+  // Automatically sizes columns evenly within row
+  .sm-auto {
+    flex: auto;
+  }
+
+  // Sets columns to default width
+  .sm-initial {
+    flex: initial;
+  }
+}
+
+// Medium columns
+@media (min-width: 768px) {
+  @for $i from 1 through 12 {
+    .md-c#{$i} {
+      flex: (100% / 12) * $i;
+    }
+  }
+
+  // Automatically sizes columns evenly within row
+  .md-auto {
+    flex: auto;
+  }
+
+  // Sets columns to default width
+  .md-initial {
+    flex: initial;
+  }
+}
+
+// Large columns
+@media (min-width: 992px) {
+  @for $i from 1 through 12 {
+    .lg-c#{$i} {
+      flex: (100% / 12) * $i;
+    }
+  }
+
+  // Automatically sizes columns evenly within row
+  .lg-auto {
+    flex: auto;
+  }
+
+  // Sets columns to default width
+  .lg-initial {
+    flex: initial;
+  }
+}
+
+// Extra large columns
+@media (min-width: 1200px) {
+  @for $i from 1 through 12 {
+    .xl-c#{$i} {
+      flex: (100% / 12) * $i;
+    }
+  }
+
+  // Automatically sizes columns evenly within row
+  .xl-auto {
+    flex: auto;
+  }
+
+  // Sets columns to default width
+  .xl-initial {
+    flex: initial;
+  }
+}
