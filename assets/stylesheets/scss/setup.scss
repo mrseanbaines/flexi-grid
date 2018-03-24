@@ -1,2 +1,32 @@
 $gutter: 15px;
 $site-max-width: 960px;
+
+$sm-screen: 576px;
+$md-screen: 768px;
+$lg-screen: 992px;
+$xl-screen: 1200px;
+
+// Mixins
+@mixin breakpoint($size) {
+  @if $size == 'sm' {
+    @media (min-width: $sm-screen) {
+      @content;
+    }
+  } @else if $size == 'md' {
+    @media (min-width: $md-screen) {
+      @content;
+    }
+  } @else if $size == 'lg' {
+    @media (min-width: $lg-screen) {
+      @content;
+    }
+  } @else if $size == 'xl' {
+    @media (min-width: $xl-screen) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $size) {
+      @content;
+    }
+  }
+}

@@ -37,7 +37,7 @@
 // Extra small columns
 @for $i from 1 through 12 {
   .xs-c#{$i} {
-    flex: (100% / 12) * $i;
+    flex: 0 0 (100% / 12) * $i;
   }
 }
 
@@ -52,10 +52,10 @@
 }
 
 // Small columns
-@media (min-width: 576px) {
+@include breakpoint(sm) {
   @for $i from 1 through 12 {
     .sm-c#{$i} {
-      flex: (100% / 12) * $i;
+      flex: 0 0 (100% / 12) * $i;
     }
   }
 
@@ -71,10 +71,10 @@
 }
 
 // Medium columns
-@media (min-width: 768px) {
+@include breakpoint(md) {
   @for $i from 1 through 12 {
     .md-c#{$i} {
-      flex: (100% / 12) * $i;
+      flex: 0 0 (100% / 12) * $i;
     }
   }
 
@@ -90,10 +90,10 @@
 }
 
 // Large columns
-@media (min-width: 992px) {
+@include breakpoint(lg) {
   @for $i from 1 through 12 {
     .lg-c#{$i} {
-      flex: (100% / 12) * $i;
+      flex: 0 0 (100% / 12) * $i;
     }
   }
 
@@ -109,10 +109,10 @@
 }
 
 // Extra large columns
-@media (min-width: 1200px) {
+@include breakpoint(xl) {
   @for $i from 1 through 12 {
     .xl-c#{$i} {
-      flex: (100% / 12) * $i;
+      flex: 0 0 (100% / 12) * $i;
     }
   }
 
