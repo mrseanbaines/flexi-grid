@@ -58,6 +58,7 @@
         flex: 0 0 (100% / 12) * $i;
       }
     }
+
     // Automatically sizes columns evenly within row
     .#{$breakpoint}-auto {
       flex: auto;
