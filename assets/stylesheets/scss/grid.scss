@@ -51,78 +51,21 @@
   flex: initial;
 }
 
-// Small columns
-@include breakpoint(sm) {
-  @for $i from 1 through 12 {
-    .sm-c#{$i} {
-      flex: 0 0 (100% / 12) * $i;
+@each $breakpoint, $width in $breakpoints {
+  @include breakpoint($breakpoint) {
+    @for $i from 1 through 12 {
+      .#{$breakpoint}-c#{$i} {
+        flex: 0 0 (100% / 12) * $i;
+      }
     }
-  }
-
-  // Automatically sizes columns evenly within row
-  .sm-auto {
-    flex: auto;
-  }
-
-  // Sets columns to default width
-  .sm-initial {
-    flex: initial;
-  }
-}
-
-// Medium columns
-@include breakpoint(md) {
-  @for $i from 1 through 12 {
-    .md-c#{$i} {
-      flex: 0 0 (100% / 12) * $i;
+    // Automatically sizes columns evenly within row
+    .#{$breakpoint}-auto {
+      flex: auto;
     }
-  }
 
-  // Automatically sizes columns evenly within row
-  .md-auto {
-    flex: auto;
-  }
-
-  // Sets columns to default width
-  .md-initial {
-    flex: initial;
-  }
-}
-
-// Large columns
-@include breakpoint(lg) {
-  @for $i from 1 through 12 {
-    .lg-c#{$i} {
-      flex: 0 0 (100% / 12) * $i;
+    // Sets columns to default width
+    .#{$breakpoint}-initial {
+      flex: initial;
     }
-  }
-
-  // Automatically sizes columns evenly within row
-  .lg-auto {
-    flex: auto;
-  }
-
-  // Sets columns to default width
-  .lg-initial {
-    flex: initial;
-  }
-}
-
-// Extra large columns
-@include breakpoint(xl) {
-  @for $i from 1 through 12 {
-    .xl-c#{$i} {
-      flex: 0 0 (100% / 12) * $i;
-    }
-  }
-
-  // Automatically sizes columns evenly within row
-  .xl-auto {
-    flex: auto;
-  }
-
-  // Sets columns to default width
-  .xl-initial {
-    flex: initial;
   }
 }

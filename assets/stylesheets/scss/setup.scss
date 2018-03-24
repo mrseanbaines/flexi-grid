@@ -6,26 +6,22 @@ $md-screen: 768px;
 $lg-screen: 992px;
 $xl-screen: 1200px;
 
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
 // Mixins
-@mixin breakpoint($size) {
-  @if $size == 'sm' {
-    @media (min-width: $sm-screen) {
+@mixin breakpoint($width) {
+  @if map-has-key($breakpoints, $width) {
+    @media (min-width: #{map-get($breakpoints, $width)}) {
       @content;
     }
-  } @else if $size == 'md' {
-    @media (min-width: $md-screen) {
-      @content;
-    }
-  } @else if $size == 'lg' {
-    @media (min-width: $lg-screen) {
-      @content;
-    }
-  } @else if $size == 'xl' {
-    @media (min-width: $xl-screen) {
-      @content;
-    }
-  } @else {
-    @media (min-width: $size) {
+  }
+  @else {
+    @media (min-width: $width) {
       @content;
     }
   }
