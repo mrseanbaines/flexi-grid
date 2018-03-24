@@ -23,32 +23,17 @@
   margin-left: -$gutter;
 }
 
-// All columns
-@for $i from 1 through 12 {
-  .xs-c#{$i},
-  .sm-c#{$i},
-  .md-c#{$i},
-  .lg-c#{$i},
-  .xl-c#{$i} {
+@each $breakpoint, $width in $breakpoints {
+  @for $i from 1 through 12 {
+    .#{$breakpoint}-c#{$i} {
+      @extend %column-styles;
+    }
+  }
+
+  .#{$breakpoint}-auto,
+  .#{$breakpoint}-initial {
     @extend %column-styles;
   }
-}
-
-// Extra small columns
-@for $i from 1 through 12 {
-  .xs-c#{$i} {
-    flex: 0 0 (100% / 12) * $i;
-  }
-}
-
-// Automatically sizes columns evenly within row
-.xs-auto {
-  flex: auto;
-}
-
-// Sets columns to default width
-.xs-initial {
-  flex: initial;
 }
 
 @each $breakpoint, $width in $breakpoints {
