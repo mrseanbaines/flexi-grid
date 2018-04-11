@@ -21,5 +21,81 @@
     .#{$breakpoint}-justify-between {
       justify-content: space-between;
     }
+
+    .#{$breakpoint}-justify-evenly {
+      justify-content: space-evenly;
+    }
   }
+}
+
+@each $breakpoint, $width in $breakpoints {
+  @include breakpoint($breakpoint) {
+    .#{$breakpoint}-align-center {
+      align-items: center;
+    }
+
+    .#{$breakpoint}-align-start {
+      align-items: flex-start;
+    }
+
+    .#{$breakpoint}-align-end {
+      align-items: flex-end;
+    }
+
+    .#{$breakpoint}-align-stretch {
+      align-items: stretch;
+    }
+  }
+}
+
+@each $breakpoint, $width in $breakpoints {
+  @include breakpoint($breakpoint) {
+    .#{$breakpoint}-align-self-center {
+      align-self: center;
+    }
+
+    .#{$breakpoint}-align-self-start {
+      align-self: flex-start;
+    }
+
+    .#{$breakpoint}-align-self-end {
+      align-self: flex-end;
+    }
+
+    .#{$breakpoint}-align-self-stretch {
+      align-self: stretch;
+    }
+  }
+}
+
+@each $breakpoint, $width in $breakpoints {
+  @include breakpoint($breakpoint) {
+    .#{$breakpoint}-dir-col {
+      flex-direction: column;
+    }
+
+    .#{$breakpoint}-dir-col-r {
+      flex-direction: column-reverse;
+    }
+
+    .#{$breakpoint}-dir-row {
+      flex-direction: row;
+    }
+
+    .#{$breakpoint}-dir-row-r {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.h-100 {
+  height: 100%;
 }
